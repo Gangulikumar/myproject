@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- script.js (ALL FUNCTIONS HERE) -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<div class="topbar">
+    <h2>🏫 Dashboard</h2>
+    <button onclick="logout()">Logout</button>
+</div>
+
+<div class="grid">
+
+    <!-- BOOKING CARD -->
+    <div class="card">
+        <h3>Book Class</h3>
+
+        <select id="blockSelect"></select>
+        <select id="floorSelect"></select>
+        <select id="roomSelect"></select>
+
+        <input type="date" id="bookingDate">
+
+        <select id="timeSlot">
+            <option value="9-10 AM">9-10 AM</option>
+            <option value="10-11 AM">10-11 AM</option>
+            <option value="11-12 PM">11-12 PM</option>
+        </select>
+
+        <button onclick="bookRoom()">Book Room</button>
+
+        <!-- ⚠️ FIX: id missing reference in JS -->
+        <p id="statusMessage"></p>
+    </div>
+
+    <!-- HISTORY CARD -->
+    <div class="card">
+        <h3>📅 Bookings</h3>
+        <div id="historySection"></div>
+    </div>
+
+</div>
+
+</body>
+</html>

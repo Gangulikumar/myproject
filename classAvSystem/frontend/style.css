@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f1f5f9;
+}
+
+/* TOP BAR */
+.topbar {
+    background: #1e293b;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* CENTER CARD */
+.center-card {
+    text-align: center;
+    margin-top: 150px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* INPUTS */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+}
+
+/* BUTTON */
+button, .btn {
+    background: #2563eb;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    border-radius: 8px;
+}
+
+button:hover, .btn:hover {
+    background: #1d4ed8;
+}
+
+/* BOOKING ITEM */
+#historySection p, #adminHistory p {
+    background: #e2e8f0;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 6px;
+}
