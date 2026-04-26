@@ -1,13 +1,12 @@
 const mongoose = require("mongoose");
 
-const BookingSchema = new mongoose.Schema({
+const bookingSchema = new mongoose.Schema({
     block: String,
     floor: String,
     room: String,
     date: String,
     timeSlot: String,
-    teacher: String,
-    createdAt: { type: Date, default: Date.now }
+    teacher: String
 });
 
-module.exports = mongoose.model("Booking", BookingSchema);
+module.exports = mongoose.model("Booking", bookingSchema);
