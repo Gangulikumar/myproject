@@ -1,39 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Admin Panel</title>
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
 <div class="topbar">
-    <h2>Admin Panel</h2>
+    <h2>🛠 Admin Dashboard</h2>
     <button onclick="logout()">Logout</button>
 </div>
 
 <div class="card">
-    <h3>All Bookings</h3>
+    <h3>📊 All Bookings</h3>
     <div id="adminHistory"></div>
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", loadAdminData);
-
-async function loadAdminData(){
-    const res = await fetch("http://localhost:5001/api/bookings");
-    const data = await res.json();
-
-    const container = document.getElementById("adminHistory");
-
-    container.innerHTML = data.map(b => `
-        <div class="item">
-            ${b.block}-${b.floor}-${b.room} | ${b.date} | ${b.timeSlot} | ${b.teacher}
-        </div>
-    `).join("");
-}
-</script>
 
 </body>
 </html>
